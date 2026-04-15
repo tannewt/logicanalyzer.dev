@@ -1,0 +1,156 @@
+// Copyright (C) 2025 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+@import "../../assets/theme";
+
+.pf-logic-analyzer-page {
+  position: relative;
+  overflow-y: scroll;
+  padding: 40px 20px;
+}
+
+.pf-logic-analyzer-page__content {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .pf-section {
+    margin-bottom: 20px;
+    border: 1px solid var(--pf-color-border);
+    border-radius: $border-radius-large;
+    overflow: hidden;
+
+    > header {
+      padding: 12px 16px;
+      background: var(--pf-color-background-secondary);
+      border-bottom: 1px solid var(--pf-color-border);
+
+      h1 {
+        font-size: var(--pf-font-size-l);
+        margin: 0;
+      }
+    }
+
+    > article {
+      padding: 16px;
+    }
+  }
+}
+
+.pf-logic-analyzer-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pf-logic-analyzer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  > label {
+    font-size: var(--pf-font-size-s);
+    font-weight: 500;
+    color: var(--pf-color-text-secondary);
+  }
+
+  input[type="number"] {
+    width: 100px;
+    padding: 4px 8px;
+    border: 1px solid var(--pf-color-border);
+    border-radius: 4px;
+    font-size: var(--pf-font-size-m);
+  }
+}
+
+.pf-logic-analyzer-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 16px;
+}
+
+.pf-logic-analyzer-info-row {
+  font-size: var(--pf-font-size-m);
+}
+
+.pf-logic-analyzer-status {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: var(--pf-font-size-m);
+  background: var(--pf-color-background-secondary);
+
+  &.error {
+    color: var(--pf-color-danger);
+    background: rgba(var(--pf-color-danger-rgb, 220, 53, 69), 0.1);
+  }
+}
+
+// Pin configuration table.
+.pf-logic-analyzer-pin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--pf-font-size-m);
+
+  th {
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 2px solid var(--pf-color-border);
+    font-weight: 600;
+    font-size: var(--pf-font-size-s);
+    color: var(--pf-color-text-secondary);
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--pf-color-border);
+    vertical-align: middle;
+  }
+
+  .channel-num {
+    font-weight: 600;
+    font-family: var(--pf-font-mono);
+    width: 30px;
+  }
+
+  tr.disabled {
+    opacity: 0.5;
+  }
+
+  tr.enabled {
+    td.channel-num {
+      color: var(--pf-color-primary);
+    }
+  }
+
+  .pf-select {
+    min-width: 100px;
+  }
+}
+
+.pf-logic-analyzer-label-input {
+  padding: 2px 6px;
+  border: 1px solid var(--pf-color-border);
+  border-radius: 4px;
+  font-size: var(--pf-font-size-m);
+  font-family: var(--pf-font-mono);
+  background: transparent;
+  color: var(--pf-color-text);
+
+  &:focus {
+    outline: 2px solid var(--pf-color-primary);
+    outline-offset: -1px;
+  }
+}
