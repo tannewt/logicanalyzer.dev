@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import {assetSrc} from '../../base/assets';
 import {AppImpl} from '../../core/app_impl';
 import {App} from '../../public/app';
 import {PerfettoPlugin} from '../../public/plugin';
-
-const TRACE_PATH = '/test/data/protocol_decoder_sample.pftrace';
 
 export default class implements PerfettoPlugin {
   static readonly id = 'dev.perfetto.ProtocolDecoderExample';
@@ -27,7 +26,7 @@ export default class implements PerfettoPlugin {
       name: 'Open Protocol Decoder example',
       callback: () => {
         ctx.analytics.logEvent('Trace Actions', 'Open example trace');
-        const url = `${window.location.origin}${TRACE_PATH}`;
+        const url = assetSrc('assets/protocol_decoder_sample.pftrace');
         fetch(url)
           .then((resp) => resp.blob())
           .then((blob) => {
