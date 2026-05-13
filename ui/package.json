@@ -1,10 +1,10 @@
 {
-  "name": "viewtrace-webui",
+  "name": "logicanalyzer-webui",
   "version": "1.0.0",
-  "description": "viewtrace.dev Web UI",
-  "repository": "https://github.com/tannewt/viewtrace.dev",
+  "description": "logicanalyzer.dev Web UI",
+  "repository": "https://github.com/tannewt/logicanalyzer.dev",
   "main": "main.js",
-  "author": "viewtrace.dev",
+  "author": "logicanalyzer.dev",
   "license": "Apache-2.0",
   "dependencies": {
     "@codemirror/autocomplete": "^6.18.6",

@@ -106,7 +106,7 @@ export class HomePage implements m.ClassComponent {
       '.pf-home-page',
       m(
         '.pf-home-page__center',
-        m('.pf-home-page__title', 'viewtrace.dev'),
+        m('.pf-home-page__title', 'logicanalyzer.dev'),
         m(Hints),
       ),
     );

@@ -384,7 +384,7 @@ export class Sidebar implements m.ClassComponent {
       shouldShowHiringBanner() ? m(HiringBanner) : null,
       m(
         `header.pf-sidebar__channel--${getCurrentChannel()}`,
-        m('viewtrace.dev'),
+        m('logicanalyzer.dev'),
         m(Button, {
           icon: 'menu',
           className: 'pf-sidebar-button',

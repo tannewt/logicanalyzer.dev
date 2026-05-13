@@ -13,12 +13,12 @@
 // limitations under the License.
 
 // open-perfetto-trace is a standalone JS/TS library that can be used in other
-// projects to facilitate the deep linking into viewtrace.dev. It allows opening
-// trace files or URL with viewtrace.dev, handling all the handshake with it.
+// projects to facilitate the deep linking into logicanalyzer.dev. It allows opening
+// trace files or URL with logicanalyzer.dev, handling all the handshake with it.
 
 import {formatFileSize} from '../base/file_utils';
 
-const PERFETTO_UI_URL = 'https://viewtrace.dev';
+const PERFETTO_UI_URL = 'https://logicanalyzer.dev';
 
 interface OpenTraceOptions {
   // If true (default) shows a popup dialog with a progress bar that informs
@@ -49,12 +49,12 @@ interface OpenTraceOptions {
   visStart?: string;
   visEnd?: string;
 
-  // Used to override viewtrace.dev with a custom hosted URL.
+  // Used to override logicanalyzer.dev with a custom hosted URL.
   // Useful for testing.
   uiUrl?: string;
 }
 
-// Opens a trace in viewtrace.dev.
+// Opens a trace in logicanalyzer.dev.
 // `source` can be either:
 // - A blob (e.g. a File).
 // - A URL.

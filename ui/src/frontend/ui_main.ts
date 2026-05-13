@@ -29,7 +29,7 @@ const showStatusBarFlag = featureFlags.register({
   description: 'Enable status bar at the bottom of the window',
   defaultValue: true,
 });
-const APP_TITLE = 'viewtrace.dev';
+const APP_TITLE = 'logicanalyzer.dev';
 
 // This components gets destroyed and recreated every time the current trace
 // changes. Note that in the beginning the current trace is undefined.
